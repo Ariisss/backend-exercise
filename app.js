@@ -1,7 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const userRoutes = require('./routes/user');
-const loggingMiddleware = require('./middleware/loggingMiddleware');const rateLimiter = require('./middleware/rateLimiterMiddleware');
+const loggingMiddleware = require('./middleware/loggingMiddleware');
+const rateLimiter = require('./middleware/rateLimiterMiddleware');
 
 const app = express();
 const PORT = 3000;
