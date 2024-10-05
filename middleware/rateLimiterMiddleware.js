@@ -7,6 +7,7 @@ function rateLimiter(req, res, next) {
   const now = Date.now(); // current timestamp
   const windowStart = now - 30000; // 30 seconds ago
 
+  // adds the ip address to the rateLimitStore if it doesn't exist
   if (!rateLimitStore.has(ip)) {
     rateLimitStore.set(ip, []);
   }
